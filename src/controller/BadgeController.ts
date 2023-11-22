@@ -8,7 +8,7 @@ import {QueryTypes} from "sequelize";
  * @param response
  */
 async function addBadgeToUser(request: Request, response: Response): Promise<void> {
-    const requestData: {user_id: number; badge_id: number;} = request.body?.data;
+    const requestData: {user_id: number; badge_id: number;} = request.body;
 
     if (requestData?.user_id == null || requestData?.badge_id == null)
     {
@@ -46,7 +46,7 @@ async function addBadgeToUser(request: Request, response: Response): Promise<voi
  * @param response
  */
 async function removeBadgeFromUser(request: Request, response: Response): Promise<void> {
-    const requestData: {user_id: number; badge_id: number;} = request.body?.data;
+    const requestData: {user_id: number; badge_id: number;} = request.body;
 
     if (requestData?.user_id == null || requestData?.badge_id == null)
     {
