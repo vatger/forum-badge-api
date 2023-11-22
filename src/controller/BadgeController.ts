@@ -36,6 +36,8 @@ async function addBadgeToUser(request: Request, response: Response): Promise<voi
     });
 
     response.send({message: "OK"});
+
+    console.log(`Added badge ${requestData.badge_id} to user ${requestData.user_id}`);
 }
 
 /**
@@ -60,6 +62,8 @@ async function removeBadgeFromUser(request: Request, response: Response): Promis
     });
 
     response.send({message: "OK"});
+
+    console.log(`Removed badge ${requestData.badge_id} from user ${requestData.user_id}`);
 }
 
 export default {
